@@ -1,15 +1,105 @@
-TCP based multiplayer client server Quiz game(Game System)
-Alternating Quiz With Option To Challenge:
+# TCP-Based Real-Time Quiz Game
 
-The quiz server and the client have been written in python 2. To run the quiz, open the server(server1.py) and enter the network credentials, followed by opening two instances of the client(client.py) and entering the network credentials. The two players can play on the two instances of the client, alternately answering questions. There is also a possibility to challenge a question before it is asked, and in case the designated person incorrectly replies to it, reply it correctly to gain bonus marks, but receive heavy peanlty upon giving wrong answer. The program uses TCP Sockets, and questions are read from a quiz file, like quiz1.txt.
+## 📖 Overview
 
-extra Buzzer Round Quiz:
+The **TCP-Based Real-Time Quiz Game** is a multiplayer quiz platform built on a TCP socket-based client-server architecture. This project enables multiple players to connect to a centralized server, answer quiz questions in real time, and compete for the highest score.
 
-This is another implementation of a quiz server which supports a Buzzer round, i.e. two players can simultaneously answer and the person who replies correctly, earlier is rewarded. The program uses threading and TCP Sockets. To run the quiz, open the server(server_buzzer.py) and enter the network credentials, followed by opening two instances of the client(client.py) and entering the network credentials.
+## 🚀 Features
 
-Scoring Scheme:
+- **Real-Time Multiplayer Gameplay**: Multiple clients can join the quiz session simultaneously.
+- **Server-Client Communication**: The server handles quiz logic, distributes questions, and tracks scores.
+- **Dynamic Questions**: The quiz questions are dynamically delivered to all connected clients.
+- **Instant Feedback**: Players get immediate results after submitting their answers.
+- **Leaderboard**: Scores are updated and displayed dynamically to show the ranking of players.
 
-1.Correct Answer : 10 points
-2.Incorrect Answer
-  a.Normal : 0 points
-  b.Challenge : -10 points
+## 🛠️ Technologies Used
+
+- **Programming Language**: C++
+- **Networking Protocol**: TCP/IP
+- **Standard Libraries**:
+  - `<iostream>` for input/output operations
+  - `<string>` for string manipulation
+  - `<thread>` for handling multiple clients concurrently
+  - `<sys/socket.h>` and `<netinet/in.h>` for socket programming
+
+## 📂 Project Structure
+
+```
+.
+├── img                    # Contains the screenshot of the steps to execute
+    ├── image-1.png
+    ├── image-2.png 
+    ├── image-3.png
+    ├── image-4.png
+    ├── image.png
+├── quiz_server.c          # Server-side code for managing the quiz
+├── cJSON.h                # Contains the header files
+├── quiz_client.c          # Client-side code for participating in the quiz
+├── physics_question.json  # File containing quiz questions and answers
+├── README.md              # Documentation
+├── Steps_to_execute.md    # Steps for running the application
+├── TCP-Multiplayer-Game-System.pptx # PPT for this application
+```
+
+## 🔧 Setup and Installation
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/RahulVerma1441/SectionX_OS_LAB_2024_GROUP-No.8_Real-Time-Quiz-Game
+   cd Real-Time-Quiz-Game
+   ```
+
+2. **Compile the Code**:
+   Use a C++ compiler to build the server and client programs:
+   - Compile the server:
+     ```bash
+     g++ quiz_server.c -o server
+     ```
+   - Compile the client:
+     ```bash
+     g++ quiz_client.c -o client
+     ```
+
+3. **Run the Server**:
+   Start the server before any clients connect:
+   ```bash
+   ./server
+   ```
+
+4. **Run the Client**:
+   Connect to the server by running the client program on any machine:
+   ```bash
+   ./client
+   ```
+
+## 🕹️ How to Play
+
+1. **Start the Server**:
+   The server initializes the quiz and waits for clients to connect.
+
+2. **Connect Clients**:
+   Clients can join the game by running the client executable and entering the server's IP address and port.
+
+3. **Answer Questions**:
+   - Players receive questions in real time.
+   - Submit answers via the client interface.
+   - Receive immediate feedback on correctness.
+
+4. **View Leaderboard**:
+   Scores are updated dynamically, and the server announces the final leaderboard after the quiz ends.
+
+## 🛡️ Error Handling
+
+- The server handles common errors such as:
+  - Invalid inputs from clients
+  - Disconnection of clients during the game
+- The client retries the connection if the server is temporarily unavailable.
+
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to fork the repository, make changes, and submit a pull request.
+
+---
+
+Enjoy the challenge of real-time quizzing with this TCP-based multiplayer game!
