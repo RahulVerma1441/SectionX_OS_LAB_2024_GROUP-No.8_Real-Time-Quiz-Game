@@ -17,10 +17,10 @@ The **TCP-Based Real-Time Quiz Game** is a multiplayer quiz platform built on a 
 - **Programming Language**: C++
 - **Networking Protocol**: TCP/IP
 - **Standard Libraries**:
-  - `<iostream>` for input/output operations
-  - `<string>` for string manipulation
-  - `<thread>` for handling multiple clients concurrently
-  - `<sys/socket.h>` and `<netinet/in.h>` for socket programming
+  - `<stdio.h>` for input/output operations
+  - `<string.h>` for string manipulation
+  - `<pthread.h>` for handling multiple clients concurrently
+  - `<winsock2.h>` for socket programming and `<ws2tcpip.h>` for for TCP/IP protocols
 
 ## 📂 Project Structure
 
@@ -46,7 +46,7 @@ The **TCP-Based Real-Time Quiz Game** is a multiplayer quiz platform built on a 
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/RahulVerma1441/SectionX_OS_LAB_2024_GROUP-No.8_Real-Time-Quiz-Game
-   cd Real-Time-Quiz-Game
+   cd SectionX_OS_LAB_2024_GROUP-No.8_Real-Time-Quiz-Game
    ```
 
 2. **Compile the Code**:

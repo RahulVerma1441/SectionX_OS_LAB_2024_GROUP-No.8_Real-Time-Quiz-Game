@@ -54,6 +54,7 @@ Run the server executable in a terminal:
 ./server
 ```
 ![sample](img/image-2.png)
+
 The server will now be ready to accept client connections.
 
 ### 6. Start the Client(s)
